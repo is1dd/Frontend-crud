@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect, useState } from 'react'
+import Users from './Components/Users';
+import Creation from './Components/Creation';
+import {Link, useNavigate} from "react-router-dom"
+import { useRef } from "react";
+import Pagination from "./Components/Pagination";
+import { ApiContext } from './context/Apicontext';
+import AllRoutes from './Routes/AllRoutes';
 
 function App() {
+  const redirect = useNavigate();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    <main>
+      {/* <h1 onClick={()=>redirect('/')}>Back to HomePage</h1> */}
+      <AllRoutes/> 
+    </main>
+   
+
+      
+
+
+        
+   
+
+
+   
+  )
 }
 
-export default App;
+export default App
